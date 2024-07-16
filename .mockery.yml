@@ -1,0 +1,10 @@
+with-expecter: true
+mockname: "{{.InterfaceName}}"
+filename: "{{.MockName}}.go"
+
+packages:
+  go-hex-arch/internal/core/port:
+    config:
+      dir: "{{.InterfaceDir}}/mocks"
+      outpkg: mocks
+      all: True

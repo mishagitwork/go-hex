@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+option go_package = "../proto";
+
+package manager_account;
+
+// The greeting service definition.
+service ManagerAccount {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+   // Sends another greeting
+  rpc Get (GetManagerRequest) returns (GetManagerResponse) {}
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message HelloReply {
+  string message = 1;
+}
+
+// The request message containing the user's name.
+message GetManagerRequest {
+  string id = 1;
+}
+
+// The request message containing the user's name.
+message GetManagerResponse {
+  string id = 1;
+  string name = 2;
+  string phone = 3;
+}
